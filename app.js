@@ -92,7 +92,6 @@ app.get('/level2.html*', (req, res) => {
 
 
 //const Knex = require('knex');
-const mysql = require('mysql');
 
 
 
