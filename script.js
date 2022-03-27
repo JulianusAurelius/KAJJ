@@ -196,6 +196,7 @@ function goal1()
     if ((typeof x == "number" && typeof y == "number") && (x > 0 && x <= 10 && y > 0 && y <= 10) && ( (x!=8) || (y!=8) ))
     {
         g1 = true;
+        y = 11 - y;
         x *= canvas.width/10;
         x -= canvas.width/10;
         y *= canvas.height/10;
