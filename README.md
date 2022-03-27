@@ -18,7 +18,7 @@
 []Sending Emails
 
 <h2>Languages Used</h2>
-All of the course content is written in JavaScript and HTML/CSS. The website design is written with Bootstrap and Sass. The database handling was done with MySQL. HTMLCanvas and JQuery was used to create the game.
+All of the course content is written in JavaScript and HTML/CSS. The website design is written with Bootstrap. The database handling was done with MySQL. HTML Canvas and JQuery was used to create the game.
 
 <h2>Screenshots</h2>
 ![Data Server](https://user-images.githubusercontent.com/99719193/160279604-68614dc7-3db8-45f1-869f-69606d4ebfaf.png)
