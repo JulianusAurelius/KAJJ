@@ -4,21 +4,36 @@ function attack()
     {
         if ( ( (enemy_x+canvas.width/10==player_x || enemy_x-canvas.width/10==player_x) && (enemy_y==player_y) ) || ( (enemy_y+canvas.height/10==player_y || enemy_y-canvas.height/10==player_y) && (enemy_x==player_x) ) )
         {
+            if (!damageOff)
+            {
+                zombie_hp -= player_damage;
+                player_hp += player_damage;
+                $('#enem_h').text(zombie_hp);
+                $('#play_h').text(player_hp);
+                enemyDead = true;
+                if (zombie_hp == 0)
+                {
+                    currEnemyImage = zombieHurt_i;
+                    zombie_i = zombieHurt_i;
+                    $('#instr').html("You killed the zombie!<br>\
+                        <a href=\"level2.html\?title="+title+"&pos=("+String(player_x)+","+String(player_y)+")\" <button type='button' class='btn'>Next Level</button></a>");
+                }
+                // }<form id=\"foo\" method=\"post\" action=\"servletURL\"><input type=\"hidden\" name=\"title\" value=title><input type=\"hidden\" name=\"pos\" value=\"(\"+String(player_x)+\",\"+String(player_y)+\")\"></form>\
+            }
             currPlayerImage = knightAttack_i;
             currEnemyImage = zombieHurt_i;
             attackFlag = true;
             setTimeout(function(){
                 ctx.clearRect(0,0,canvas.width,canvas.height);
                 drawTiles();
-                ctx.drawImage(knight_i,player_x,player_y,player_x2,player_y2);
-                ctx.drawImage(zombie_i,enemy_x,enemy_y,enemy_x2,enemy_y2);
                 currPlayerImage = knight_i;
                 currEnemyImage = zombie_i;
+                ctx.drawImage(currPlayerImage,player_x,player_y,player_x2,player_y2);
+                ctx.drawImage(currEnemyImage,enemy_x,enemy_y,enemy_x2,enemy_y2);
                 attackFlag = false;
             },500);
 
-            zombie_hp = zombie_hp - player_damage;
-            player_hp = player_hp + zombie_hp;
+            
         }
     }
 }
@@ -34,22 +49,25 @@ function enemyAttack()
     {
         if ( ( (enemy_x+canvas.width/10==player_x || enemy_x-canvas.width/10==player_x) && (enemy_y==player_y) ) || ( (enemy_y+canvas.height/10==player_y || enemy_y-canvas.height/10==player_y) && (enemy_x==player_x) ) )
         {
-            console.log("attack");
-            currPlayerImage = knightAttack_i;
-            currEnemyImage = zombieHurt_i;
+            currPlayerImage = knightHurt_i;
             attackFlag = true;
             setTimeout(function(){
                 ctx.clearRect(0,0,canvas.width,canvas.height);
                 drawTiles();
-                ctx.drawImage(knight_i,player_x,player_y,player_x2,player_y2);
-                ctx.drawImage(zombie_i,enemy_x,enemy_y,enemy_x2,enemy_y2);
                 currPlayerImage = knight_i;
                 currEnemyImage = zombie_i;
+                ctx.drawImage(currPlayerImage,player_x,player_y,player_x2,player_y2);
+                ctx.drawImage(currEnemyImage,enemy_x,enemy_y,enemy_x2,enemy_y2);
                 attackFlag = false;
             },500);
 
-            player_hp = player_hp - 1;
-            zombie_hp = player_hp - player_damage;
+            player_hp -= 1;
+            zombie_hp += 1;
+            if (!damageOff)
+            {
+                $('#enem_h').text(zombie_hp);
+            }
+            $('#play_h').text(player_hp);
         }
     }
 }
@@ -105,8 +123,7 @@ $(function(){
                     attack();
                 }
             }
-            ctx.drawImage(currPlayerImage,player_x,player_y,player_x2,player_y2);
-            if (turnsToEnemyMove == 0)
+            if (turnsToEnemyMove == 0 && !enemyDead)
             {
                 if (enemyMoveList[0] == 0 && !collision(enemy_x,enemy_y-canvas.height/10,player_x,player_y))
                 {
@@ -141,14 +158,19 @@ $(function(){
             {
                 turnsToEnemyMove--;
             }
-    
+            if (Math.floor(Math.random()*5) == 0)
+            {
+                enemyAttack();
+            }
             ctx.drawImage(currEnemyImage,enemy_x,enemy_y,enemy_x2,enemy_y2);
+            ctx.drawImage(currPlayerImage,player_x,player_y,player_x2,player_y2);
         }
     });
 });
 
 g1 = false;
 g2 = false;
+g3 = false;
 
 
 function goal1()
@@ -170,7 +192,7 @@ function goal1()
         alert("Error: " + err.message+"\n"+"Please try again.");
     }
 
-    if ((typeof x == "number" && typeof y == "number") && (x > 0 && x <= 10 && y > 0 && y <= 10) && (x!=8 && y!=8))
+    if ((typeof x == "number" && typeof y == "number") && (x > 0 && x <= 10 && y > 0 && y <= 10) && ( (x!=8) || (y!=8) ))
     {
         g1 = true;
         x *= canvas.width/10;
@@ -180,7 +202,13 @@ function goal1()
         player_x = x;
         player_y = y;
         ctx.drawImage(currPlayerImage,player_x,player_y,player_x2,player_y2);
-        $('#instr').text("You need to complete the second goal!");
+        $('#instr').html("In this next task you need to set the title of your game! What will you call it? Knights? Zombies? Zombie Knights?! You have the freedom.\
+            Before you were working with numbers. Now you want to work with words, not numbers. To do that we need to make a special data type that tells the computer\
+            that we want to work with English, not math. This data type is called a string and you make it by putting quotes around it, either double or single, like this:<br>\
+            <span class=\"codeblock\">myVar = \"Hello World!\"</span><br>\
+            \nor<br>\
+            <span class=\"codeblock\">myVar = 'Hello World!'</span><br>\
+            Go ahead and name your game with a variable called Title or title, and setting equal to some string");
     }
     else
     {
@@ -215,15 +243,25 @@ function goal2()
 
     if(title != null)
     {
+        Title = title;
         $('#title').text(title);
         g2 = true;
-        $('#instr').text("You need to complete the third goal!");
+        $('#instr').text("Now, you might have noticed one thing that might make life tough for our player... Our enemy is invincible!! We need to fix that. I heard he has a weakness,\
+            I heard a rumor that he changed a variable called 'damageOff' to true, when it should really be false. Let's go ahead and change that back so we can have a\
+            fair fight.");
     }
     else if (Title != null)
     {
+        title = Title;
         $('#title').text(Title);
         g2 = true;
-        $('#instr').text("You need to complete the third goal!");
+        $('#instr').html("Now, you might have noticed one thing that might make life tough for our player... Our enemy is invincible!! We need to fix that. I heard he has a weakness,\
+            I heard a rumor that he changed a variable called 'damageOff' to true, when it should really be false. Let's go ahead and change that back so we can have a\
+            fair fight.<br>\
+            To do this, we need to use something with a funny name, Booleans. It's basically yes/no, true/false, on/false, etc. In Javascript we can say something is equal\
+            to true or false, like this:<br>\
+            <span class=\"codeblock\">myVar = true</span><br> (or false)<br>\
+            With that, let's change that variable so we can damage the enemy!");
     }
 }
 
@@ -239,7 +277,6 @@ function goal3()
         return true;
     }
     let text = $('#code').val();
-    let enemyDefeated = null;
 
     try
     {
@@ -249,6 +286,7 @@ function goal3()
     {
         alert("Error: " + err.message+"\n"+"Please try again.");
     }
+    console.log('test');
     if(title != null)
     {
         $('#title').text(title);
@@ -257,16 +295,14 @@ function goal3()
     {
         $('#title').text(Title);
     }
-    if (enemyDefeated == true)
+    if (damageOff == false)
     {
-        alert('Is the enemy defeated yet?');
-        return;
-    }
-    if (enemyDefeated == false)
-    {
-        $('#enem_h').text('10');
+        $('#enem_h').text(zombie_hp);
         $('#enem_h_p').append(' hp');
         g3 = true;
+        $('#instr').html("Ready for functions?<br>\
+            Defeat the zombie to move on!");
+
     }
 }
 
