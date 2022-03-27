@@ -26,7 +26,7 @@ app.post('/RowdyHacks', (req, res) => {
     let lastName = req.body.lastName;
 })
 //asign port
-const port = 8000
+const port = 8080
 //fuction to listen to port
 app.listen(port, () => console.log('is on port ${port}'));
 
