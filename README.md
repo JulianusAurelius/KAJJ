@@ -25,6 +25,6 @@ All of the course content is written in JavaScript and HTML/CSS, with jQuery and
 We hash our user's login name and password (using SHA-512) from client side to back end in case of interception, only their account with us is compromised and not their password (assuming they use a strong password), then hash it again on our back end to compare login data.
 
 <h2>Screenshots</h2>
-![Data Server](https://user-images.githubusercontent.com/99719193/160279604-68614dc7-3db8-45f1-869f-69606d4ebfaf.png)
-![background for game](https://user-images.githubusercontent.com/99719193/160280095-1e4272f4-1303-4b0f-8389-67bbf7486902.svg)
+![Data Server](https://user-images.githubusercontent.com/99719193/160279604-68614dc7-3db8-45f1-869f-69606d4ebfaf.png)<br>
+![background for game](https://user-images.githubusercontent.com/99719193/160280095-1e4272f4-1303-4b0f-8389-67bbf7486902.svg)<br>
 ![knight1 for game](https://user-images.githubusercontent.com/99719193/160280120-feff3341-e1d6-46b2-8d4c-cc7b4ecbcd5a.svg)
