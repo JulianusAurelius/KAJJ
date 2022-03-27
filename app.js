@@ -40,6 +40,18 @@ app.listen(8080, () => {
     console.log('Server started on port 5001');
 })
 
+app.get('/views/index.hbs', (req, res) => {
+    res.sendFile(__dirname + '/views/index.hbs');
+});
+
+app.get('/views/login.hbs', (req, res) => {
+    res.sendFile(__dirname + '/views/login.hbs');
+});
+
+app.get('/views/register.hbs', (req, res) => {
+    res.sendFile(__dirname + '/views/register.hbs');
+});
+
 //For Courses
 app.get('/intro.html', (req, res) => {
     res.sendFile(__dirname + '/intro.html');
