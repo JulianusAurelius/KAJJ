@@ -14,7 +14,10 @@ app.get('/login.html', (req, res) => {
     res.sendFile(__dirname + '/login.html');
 });
 
-//route to level2 page
+app.get('/intro.html', (req, res) => {
+    res.sendFile(__dirname + '/intro.html');
+});
+
 app.get('/level1.html', (req, res) => {
     res.sendFile(__dirname + '/level1.html');
 });
