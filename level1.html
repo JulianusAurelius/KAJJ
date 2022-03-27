@@ -6,9 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        canvas {
+        border: 1px solid black;
+    }
+    h3 {
+        height: 15px;
+        text-align: center;
+    }
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background: #696969;
+    }
+    .codeblock {
+        background-color: black;
+        color: white;
+    }
+    #instr {
+        border: 3px solid white;
+        border-radius: 20px;
+        background-color: #EFEFEF;
+        font-size: 20px;
+
+    }
+    #title {
+      color: white;
+      font-size: 40px;
+
+    }
+    #instr p{
+      margin-left: 10px;
+      margin-right: 10px;
+      min-height: 5px;
+    }
+    .ide p{
+      color: white;
+    }
+
+    .play_h{
+      font-weight: bold;
+    }
+    .enem_h{
+      font-weight: bold;
+    }
+    </style>
     <script src="./script.js"></script>
     <link rel="stylesheet" type="text/css" href="lvl1.css">
-    <link rel="stylesheet" type="text/css" href="game.css">
     <title>Document</title>
 </head>
 <body>
