@@ -1,5 +1,6 @@
-<h1>KAJJ Academy</h1>
-<h2>Basic Description</h2>
+<h1>KAJJ Academy</h1><br>
+https://hackathon-website-enfpf6p55q-uc.a.run.app/<br>
+<h2>Basic Description</h2><br>
 - A website application that is for children K-12 that are being homeschooled. Courses have several different sections for students to work through. Made one high quality course as a demostration. Project still in development.<br>
 - The course is a Computer Science course for kids from 3rd to 8th grade. It is based around the fundamentals of coding. The range is from variables and data types to functions.<br>
 - To access the game, go to Course > Introduction To Computer Science > Enroll. Enjoy!<br>
@@ -17,10 +18,11 @@
 [ ]Monetiziation<br>
 [ ]Course Progress Tracker<br>
 [ ]Sending Emails<br>
-[ ]Assigning students to parens<br>
+[ ]Assigning students to parents<br>
 
-<h2>Languages Used</h2>
-All of the course content is written in JavaScript and HTML/CSS. The website design is written with Bootstrap. The database handling was done with MySQL. HTML Canvas and JQuery was used to create the game.
+<h2>Tech Tree</h2>
+All of the course content is written in JavaScript and HTML/CSS, with jQuery and Canvas on the front end, and Node.js, Express.js, and Handlebars.js on the backend. The website design is written with Bootstrap. The database has multiple tables designed to hold real data, and was done with MySQL, hosted on Google SQL. The website is hosted on Google Cloud Run, and is connected to our database on Google SQL.<br>
+We hash our user's login name and password (using SHA-512) from client side to back end in case of interception, only their account with us is compromised and not their password (assuming they use a strong password), then hash it again on our back end to compare login data.
 
 <h2>Screenshots</h2>
 ![Data Server](https://user-images.githubusercontent.com/99719193/160279604-68614dc7-3db8-45f1-869f-69606d4ebfaf.png)
