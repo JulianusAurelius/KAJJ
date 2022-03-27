@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended:false }));
 //parse JSON bodies
 app.use(express.json());
 
-app.set('view engine', 'hbs');
+// app.set('view engine', 'hbs');
 
 // db.connect( (error) => {
 //     if(error){
@@ -31,9 +31,9 @@ app.set('view engine', 'hbs');
 //         console.log('mysql connected...')
 //     }
 // })
-//link routes
-app.use('/', require('./routes/pages'));
-app.use('/auth', require('./routes/auth'));
+// //link routes
+// app.use('/', require('./routes/pages'));
+// app.use('/auth', require('./routes/auth'));
 
 
 app.listen(8080, () => { 
