@@ -15,8 +15,9 @@ function attack()
                 {
                     currEnemyImage = zombieHurt_i;
                     zombie_i = zombieHurt_i;
+                    console.log('test');
                     $('#instr').html("You killed the zombie!<br>\
-                        <a href=\"level2.html\?title="+title+"&pos=("+String(player_x)+","+String(player_y)+")\" <button type='button' class='btn'>Next Level</button></a>");
+                        <a id='next_level' href=\"level2.html?title="+title+"&pos=("+String(player_x)+","+String(player_y)+")\">Next Level</a>");
                 }
                 // }<form id=\"foo\" method=\"post\" action=\"servletURL\"><input type=\"hidden\" name=\"title\" value=title><input type=\"hidden\" name=\"pos\" value=\"(\"+String(player_x)+\",\"+String(player_y)+\")\"></form>\
             }
@@ -205,9 +206,9 @@ function goal1()
         $('#instr').html("In this next task you need to set the title of your game! What will you call it? Knights? Zombies? Zombie Knights?! You have the freedom.\
             Before you were working with numbers. Now you want to work with words, not numbers. To do that we need to make a special data type that tells the computer\
             that we want to work with English, not math. This data type is called a string and you make it by putting quotes around it, either double or single, like this:<br>\
-            <span class=\"codeblock\">myVar = \"Hello World!\"</span><br>\
+            <span class=\"codeblock\">myVar = \"Hello World!\";</span><br>\
             \nor<br>\
-            <span class=\"codeblock\">myVar = 'Hello World!'</span><br>\
+            <span class=\"codeblock\">myVar = 'Hello World!';</span><br>\
             Go ahead and name your game with a variable called Title or title, and setting equal to some string");
     }
     else
@@ -246,9 +247,13 @@ function goal2()
         Title = title;
         $('#title').text(title);
         g2 = true;
-        $('#instr').text("Now, you might have noticed one thing that might make life tough for our player... Our enemy is invincible!! We need to fix that. I heard he has a weakness,\
+        $('#instr').html("Now, you might have noticed one thing that might make life tough for our player... Our enemy is invincible!! We need to fix that. I heard he has a weakness,\
             I heard a rumor that he changed a variable called 'damageOff' to true, when it should really be false. Let's go ahead and change that back so we can have a\
-            fair fight.");
+            fair fight.<br>\
+            To do this, we need to use something with a funny name, Booleans. It's basically yes/no, true/false, on/false, etc. In Javascript we can say something is equal\
+            to true or false, like this:<br>\
+            <span class=\"codeblock\">myVar = true;</span><br> (or false)<br>\
+            With that, let's change that variable so we can damage the enemy!");
     }
     else if (Title != null)
     {
@@ -260,7 +265,7 @@ function goal2()
             fair fight.<br>\
             To do this, we need to use something with a funny name, Booleans. It's basically yes/no, true/false, on/false, etc. In Javascript we can say something is equal\
             to true or false, like this:<br>\
-            <span class=\"codeblock\">myVar = true</span><br> (or false)<br>\
+            <span class=\"codeblock\">myVar = true;</span><br> (or false)<br>\
             With that, let's change that variable so we can damage the enemy!");
     }
 }
