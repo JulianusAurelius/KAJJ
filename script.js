@@ -203,6 +203,7 @@ function goal1()
         player_x = x;
         player_y = y;
         ctx.drawImage(currPlayerImage,player_x,player_y,player_x2,player_y2);
+        $('#instr').addClass('purple');
         $('#instr').html("In this next task you need to set the title of your game! What will you call it? Knights? Zombies? Zombie Knights?! You have the freedom.\
             Before you were working with numbers. Now you want to work with words, not numbers. To do that we need to make a special data type that tells the computer\
             that we want to work with English, not math. This data type is called a string and you make it by putting quotes around it, either double or single, like this:<br>\
@@ -247,6 +248,7 @@ function goal2()
         Title = title;
         $('#title').text(title);
         g2 = true;
+        $('#instr').removeClass('purple');
         $('#instr').html("Now, you might have noticed one thing that might make life tough for our player... Our enemy is invincible!! We need to fix that. I heard he has a weakness,\
             I heard a rumor that he changed a variable called 'damageOff' to true, when it should really be false. Let's go ahead and change that back so we can have a\
             fair fight.<br>\
@@ -260,6 +262,7 @@ function goal2()
         title = Title;
         $('#title').text(Title);
         g2 = true;
+        $('#instr').removeClass('purple');
         $('#instr').html("Now, you might have noticed one thing that might make life tough for our player... Our enemy is invincible!! We need to fix that. I heard he has a weakness,\
             I heard a rumor that he changed a variable called 'damageOff' to true, when it should really be false. Let's go ahead and change that back so we can have a\
             fair fight.<br>\
@@ -305,6 +308,7 @@ function goal3()
         $('#enem_h').text(zombie_hp);
         $('#enem_h_p').append(' hp');
         g3 = true;
+        $('#instr').addClass('purple');
         $('#instr').html("Ready for functions?<br>\
             Defeat the zombie to move on!");
 
