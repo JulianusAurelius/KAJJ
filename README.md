@@ -2,6 +2,7 @@
 <h2>Basic Description</h2>
 - A website application that is for children K-12 that are being homeschooled. Courses have several different sections for students to work through. Made one high quality course as a demostration. Project still in development.
 - The course is a Computer Science course for kids from 3rd to 8th grade. It is based around the fundamentals of coding. The range is from variables and data types to functions.
+- To access the game, go to Course > Introduction To Computer Science > Enroll. Enjoy!
 
 <h2>Elements(x = complete)</h2>
 [x] Basic Website Design<br>
@@ -12,10 +13,11 @@
 [x] Code Execution within course<br>
 [x] Google Cloud for Database Handling<br>
 [x] SHA-512<br>
-[]Allow student to be assigned to parent account<br>
-[]Monetiziation<br>
-[]Course Progress Tracker<br>
-[]Sending Emails<br>
+[ ]Allow student to be assigned to parent account<br>
+[ ]Monetiziation<br>
+[ ]Course Progress Tracker<br>
+[ ]Sending Emails<br>
+[ ]Assigning students to parens<br>
 
 <h2>Languages Used</h2>
 All of the course content is written in JavaScript and HTML/CSS. The website design is written with Bootstrap. The database handling was done with MySQL. HTML Canvas and JQuery was used to create the game.
