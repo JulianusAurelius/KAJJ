@@ -66,15 +66,15 @@ app.get('/level1.html', (req, res) => {
 });
 
 app.get('/portalindex.html', (req, res) => {
-    res.sendFile(__dirname + '/level1.html');
+    res.sendFile(__dirname + '/portalindex.html');
 });
 
 app.get('/login2.html', (req, res) => {
-    res.sendFile(__dirname + '/level1.html');
+    res.sendFile(__dirname + '/login2.html');
 });
 
 app.get('/register.html', (req, res) => {
-    res.sendFile(__dirname + '/level1.html');
+    res.sendFile(__dirname + '/register.html');
 });
 
 app.get('/back-retry2.png', (req, res) => {
