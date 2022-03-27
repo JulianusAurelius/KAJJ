@@ -1,22 +1,31 @@
+/* main page design start */
 *{
-    padding:0;
-    margin: 0;
+  margin: 0;
+  padding: 0;
 }
 .header{
   height: 90vh;
-  background-color: #D3DEDC;
+  background-color: #F5F5F5;
 }
-.navbar-style{
-  box-shadow: 0 5px 10px #efefef;
-  margin-left: 10px;
+
+ .navbar-style{
+  background-color: #5B7DB1;
+  height: 13vh;
+  margin-bottom: 20px;
+}
+.navbar h2{
+  color: white;
+  text-align: left;
+
 }
 .nav-link{
-  color: #8E806A;
+  color: red;
 }
+
 /* menubar */
 .menubar{
   flex: 1;
-  text-align: right;
+  text-align: left;
   padding: 20px;
 }
 
@@ -31,7 +40,7 @@
   content: '';
   width: 0%;
   height: 2px;
-  background: #8E806A;
+  background: red;
   display: block;
   margin: auto;
   transition: 0.5s;
@@ -41,7 +50,7 @@
   width: 100%;
 }
 /* menubar design */
-.logo{
+ .logo{
   width: 70px;
   padding: 2px 10px;
 }
@@ -53,24 +62,295 @@
   padding: 50px;
 }
 .container h1{
-  color: #8E806A;
-  font-size: 50px;
+  color: #5B7DB1;
+  font-weight: bold;
 
+}
+.container h3{
+  color: #5B7DB1;
 }
 .container p{
   color: #777;
   text-align: center;
 }
-.login{
-  border: solid 5px black;
-  border-radius: 10px;
-  box-sizing: content-box;
-  box-sizing: border-box;
-  height: max-content;
+/* subject to learn style */
+.subject{
+  width: 100%;
+  margin: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.subject-title{
+  text-align: center;
+  padding: 10px;
+  margin: 5px 20px;
+  margin-bottom: 40px;
+  color: #5B7DB1;
+  font-style: bold;
+}
+.icon{
+  margin-bottom: 20px;
+}
+.icon:hover{
+  color: #5B7DB1;
+}
+
+/* oppotunities */
+
+#feature{
+  padding: 5vw 8vw 0 8vw;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: : 20px;
+}
+#feature .fea-box{
+  background: #F9F9FF;
+  text-align: start;
+}
+#feature .fea-base{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+  grid-gap: 1rem;
+}
+#feature .fea-box i{
+  font-size: 2.3rem;
+}
+#feature .fea-box h3{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #5B7DB1;
+  padding: 13px 0 7px 0;
+}
+#feature .fea-box p{
+  font-size: 1rem;
+  font-weight: 50;
+  color: black;
+  padding: 13px 0 7px 0;
+}
+
+/* course */
+
+.menucatalog{
+  background: #EEEEEE;
+}
+.catalog{
+  background-color: white;
+}
+.main-course{
+  background-color: white;
+}
+/* detail course 2 */
+.course-img{
+  width:80%;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+.course-head{
+  margin-left: 30px;
+}
+.course-head h2{
+  font-size: 40px;
+  color: #5B7DB1;
+}
+.course-head i{
+  color: red;
+}
+.course-head p{
+  color: #64626e;
+}
+.instructor{
+    margin-left: 30px;
+}
+.instructor h3{
+  color: #5B7DB1;
+  margin-bottom: 20px;
+}
+.tutor{
+  display: flex;
 
 }
-.register{
-  border: solid 5px black;
-  border-radius: 10px;
+.tutor img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.tutor-det h5 {
+  color: #64626e;
+}
+.tutor-det p {
+  color: #64626e;
+}
+.overview p{
+  color: #64626e;
+  line-height: inherit;
+}
+/* .learn-content{
+  margin-left: 30px;
+} */
+.learn p{
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.learn i{
+  color: #654ce4;
+  font-weight: 700;
+  margin-right: 20px;
 
 }
+
+.enroll{
+  width: 300px;
+  margin-top: 30px;
+  margin-left: 30px;
+  background: #F5F5F5 ;
+  padding: 0 30px 30px 40px
+  border-radius: 11px;
+  box-shadow: 0px 20px 40px 0 rgb(11 2 55 / 8%);
+}
+.enroll-btn{
+ text-align: center;
+}
+
+
+/* price design */
+.price-title{
+  text-align: center;
+  margin-bottom: 40px;
+
+}
+.price{
+  padding: 90px;
+  min-height: 100vh
+}
+.price-card {
+  padding: 3% 2%;
+
+}
+
+.class-type{
+  font-weight: bold;
+}
+
+/* about us design */
+.image-abt{
+  width: 20rem;
+  margin-left: 40px;
+}
+.abt-content p{
+  text-align: left;
+  padding-top: 10px;
+  margin-top: 20px;
+  line-height: inherit;
+
+}
+
+
+.offer{
+  height: 85vh;
+}
+
+.offer-container .card {
+    max-width: 300px;
+    height: 215px;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out
+}
+
+.offer-container .card:hover {
+    height: 450px
+}
+
+.offer-container .card .imgContainer {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    top: -50px;
+    left: 10px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2)
+}
+
+.offer-container .card .imgContainer img {
+    max-width: 100%;
+
+    border-radius: 4px
+}
+
+.offer-container .card .content {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-in-out
+}
+
+.offer-container .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s
+}
+.offer{
+  background-color: #F5F5F5;
+}
+.offer h1{
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #5B7DB1;
+}
+
+@media (max-width: 330px) {
+    .container .card .imgContainer {
+        left: -2px
+    }
+}
+/* footer desgin */
+.footer{
+  background-color: #5B7DB1;
+  overflow-x: hidden;
+  padding: 14vmin 18vmin;
+}
+.footer p> span{
+  color: #ff512f;
+}
+.footer p{
+  color: white;
+}
+.footer h1{
+  color:  white;
+
+}
+.footer h4{
+  color: white;
+  text-style: light;
+}
+.text-muted{
+  color: white;
+}
+.footer input{
+  color: white;
+  border: none: !important;
+}
+.footer input::placeholder{
+  color: white;
+}
+/* footer .input-group.input-group-text{
+  background-color: : #8
+  border: none;
+} */
+/* main page design end */
