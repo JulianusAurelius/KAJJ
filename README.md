@@ -21,7 +21,7 @@ https://hackathon-website-enfpf6p55q-uc.a.run.app/<br>
 [ ]Assigning students to parents<br>
 
 <h2>Tech Tree</h2>
-All of the course content is written in JavaScript and HTML/CSS, with jQuery and Canvas on the front end, and Node.js, Express.js, and Handlebars.js on the backend. The website design is written with Bootstrap. The database has multiple tables designed to hold real data, and was done with MySQL, hosted on Google SQL. The website is hosted on Google Cloud Run, and is connected to our database on Google SQL.<br>
+All of the course content is written in JavaScript and HTML/CSS, with jQuery and Canvas on the front end, and Node.js, Express.js, and Handlebars.js on the backend. The website design is written with Bootstrap. The database has multiple tables designed to hold real data, and was done with MySQL, hosted on Google SQL. It's ready and can hold real data, however it is not connectied to our website instance. The website is hosted on Google Cloud Run, and is connected to our database on Google SQL.<br> 
 We hash our user's login name and password (using SHA-512) from client side to back end in case of interception, only their account with us is compromised and not their password (assuming they use a strong password), then hash it again on our back end to compare login data.
 
 <h2>Screenshots</h2>
