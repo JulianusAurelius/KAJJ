@@ -4,18 +4,18 @@
 - The course is a Computer Science course for kids from 3rd to 8th grade. It is based around the fundamentals of coding. The range is from variables and data types to functions.
 
 <h2>Elements(x = complete)</h2>
-[x] Basic Website Design
-[x] Login Form
-[x] HTML Email
-[x] JWT/Authentification
-[x] Mobile Friendly
-[x] Code Execution within course
-[x] Google Cloud for Database Handling
-[x] SHA-512
-[]Allow student to be assigned to parent account
-[]Monetiziation
-[]Course Progress Tracker
-[]Sending Emails
+[x] Basic Website Design<br>
+[x] Login Form<br>
+[x] HTML Email<br>
+[x] JWT/Authentification<br>
+[x] Mobile Friendly<br>
+[x] Code Execution within course<br>
+[x] Google Cloud for Database Handling<br>
+[x] SHA-512<br>
+[]Allow student to be assigned to parent account<br>
+[]Monetiziation<br>
+[]Course Progress Tracker<br>
+[]Sending Emails<br>
 
 <h2>Languages Used</h2>
 All of the course content is written in JavaScript and HTML/CSS. The website design is written with Bootstrap. The database handling was done with MySQL. HTML Canvas and JQuery was used to create the game.
