@@ -1,28 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="lvl1.css">
+    <link rel="stylesheet" href="game.css">
+    <title>Document</title>
+</head>
+<body>
     <head>
-        <style>
-            canvas {
-                border: 1px solid black;
-            }
-            h3 {
-                height: 15px;
-                text-align: center;
-            }
-            body {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-            .codeblock {
-                background-color: black;
-                color: white;
-            }
-            #instr {
-                border: 1px solid black;
-            }
-        </style>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="./script.js"></script>
+    
     </head>
     <body>
         <div id="instr">
@@ -30,20 +21,21 @@
             left corner up. Set your player to anywhere the enemy isn't to see your player!</p>
         </div>
         <div id="game">
-            <h3 id="title"></h3>
-            <canvas id="canvas" width="400" height="400"></canvas> 
+            <h3 id="title">Level 1</h3>
+            <canvas id="canvas" width="400" height="400"></canvas>
         </div>
 
-        <div>
+        <div class="ide">
             <!-- x=6;y=6;title='t';damageOff=false; -->
             <textarea id="code" cols="50" rows="30" placeholder="Write your code here!"></textarea>
             <button id="button">Run</button>
             <p id="play_h_p" >Player Health: <span id="play_h">10</span> hp</p>
             <p id="enem_h_p">Enemy Health: <span id="enem_h">Invincible</span></p>
         </div>
-          
-          
+
+
     </body>
+
     <script>
         var canvas = document.getElementById("canvas");
         var ctx = canvas.getContext("2d");
@@ -72,7 +64,7 @@
             drawTiles();
         };
         let x = undefined;
-        let y = undefined;        
+        let y = undefined;
 
         let player_x = x;
         let player_x2 = canvas.width/10;
@@ -94,7 +86,7 @@
         let currPlayerImage = knight_i;
 
         knight_i.onload = function () {
-           
+
             ctx.drawImage(currPlayerImage,player_x,player_y,player_x2,player_y2);
         };
 
@@ -105,12 +97,11 @@
         let enemy_y2 = canvas.height/10;
         let zombie_hp = 10;
         let enemyVulnerable = true;
-        let damageOff=true;
         var zombie_i = new Image();
         zombie_i.src = zombie;
 
         zombie_i.onload = function () {
-           
+
             ctx.drawImage(zombie_i,enemy_x,enemy_y,enemy_x2,enemy_y2);
         };
 
@@ -121,7 +112,7 @@
         let turnsToEnemyMove = 3;
         let enemyDead = false;
         let enemyMoveList = [0,0,1,1,2,2,3,3];
-        
+
 
         $("#code").click(function()
         {
@@ -143,6 +134,7 @@
                 }
             }
         });
-        
+
     </script>
+</body>
 </html>

@@ -1,0 +1,16 @@
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.oneline {
+    display: inline
+}
+.placeholder {
+    height: 90px;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+a {
+    text-align: center;
+    color: red;
+}
