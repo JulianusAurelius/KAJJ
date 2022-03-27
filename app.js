@@ -58,7 +58,7 @@ app.get('/index.html', (req, res) => {
 
 //For Courses
 app.get('/intro.html', (req, res) => {
-    res.sendFile(__dirname + '/intro.html');
+    res.sendFile(__dirname + '/intro1.html');
 });
 
 app.get('/level1.html', (req, res) => {
