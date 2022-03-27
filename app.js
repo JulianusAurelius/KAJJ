@@ -101,6 +101,18 @@ app.get('/Geography.jpg', (req, res) => {
     res.sendFile(__dirname + '/Geography.jpg');
 });
 
+app.get('/intro1.css', (req, res) => {
+    res.sendFile(__dirname + '/intro1.css');
+});
+
+app.get('/lvl1.css', (req, res) => {
+    res.sendFile(__dirname + '/lvl1.css');
+});
+
+app.get('/lvl2.css', (req, res) => {
+    res.sendFile(__dirname + '/lvl2.css');
+});
+
 app.get('/History.jpg', (req, res) => {
     res.sendFile(__dirname + '/History.jpg');
 });
