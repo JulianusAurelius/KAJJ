@@ -1,6 +1,25 @@
+body{
+  background-color: #e6f2ff;
+}
 .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    padding: 15px;
+    margin: 15px;
+}
+.mid{
+  margin: 15px;
+  background-color: hsla(204, 10%, 50%,.5);
+  border-radius: 10px;
+}
+.content p{
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 2rem;
+}
+.formula{
+  margin-left: 20px;
 }
 .oneline {
     display: inline
@@ -11,6 +30,19 @@
     /* border: 1px solid black; */
 }
 a {
+    font-weight:bold;
     text-align: center;
     color: red;
+    font-size: 30px;
+    border: solid;
+    border-radius: 5px;
+    margin-top: 20px;
+    position: relative;
+    left: 600px;
+
+}
+.codeblock{
+  background-color: hsla(204,100%,0%,.85);
+  color: #e6ffff;
+  padding: 2px;
 }
