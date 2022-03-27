@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 //route to login page
-app.get('/RowdyHacks', (req, res) => {
+app.get('/login.html', (req, res) => {
     res.sendFile(__dirname + '/login.html');
 });
 
