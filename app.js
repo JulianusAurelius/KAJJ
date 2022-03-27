@@ -73,6 +73,118 @@ app.get('/knight-retry3.png', (req, res) => {
     res.sendFile(__dirname + '/knight-retry3.png');
 });
 
+app.get('/EmailJS.html', (req, res) => {
+    res.sendFile(__dirname + '/EmailJS.html');
+});
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/');
+});
+
+app.get('/logo.png', (req, res) => {
+    res.sendFile(__dirname + '/logo.png');
+});
+
+app.get('/Aboutus.jpg', (req, res) => {
+    res.sendFile(__dirname + '/Aboutus.jpg');
+});
+
+app.get('/Algebra.jpg', (req, res) => {
+    res.sendFile(__dirname + '/Algebra.jpg');
+});
+
+app.get('/Data-science.jpg', (req, res) => {
+    res.sendFile(__dirname + '/Data-science.jpg');
+});
+
+app.get('/Geography.jpg', (req, res) => {
+    res.sendFile(__dirname + '/Geography.jpg');
+});
+
+app.get('/History.jpg', (req, res) => {
+    res.sendFile(__dirname + '/History.jpg');
+});
+
+app.get('/Web.jpg', (req, res) => {
+    res.sendFile(__dirname + '/Web.png');
+});
+
+app.get('/aboutus.html', (req, res) => {
+    res.sendFile(__dirname + '/aboutus.html');
+});
+
+app.get('/afterclass.jpg', (req, res) => {
+    res.sendFile(__dirname + '/afterclass.jpg');
+});
+
+app.get('/biggr.jpg', (req, res) => {
+    res.sendFile(__dirname + '/biggr.jpg');
+});
+
+app.get('/c-program.jpg', (req, res) => {
+    res.sendFile(__dirname + '/c-program.jpg');
+});
+
+app.get('/calculus.jpg', (req, res) => {
+    res.sendFile(__dirname + '/calculus.jpg');
+});
+
+app.get('/course.html', (req, res) => {
+    res.sendFile(__dirname + '/course.html');
+});
+
+app.get('/detail.html', (req, res) => {
+    res.sendFile(__dirname + '/detail.html');
+});
+
+app.get('/game.jpg', (req, res) => {
+    res.sendFile(__dirname + '/game.jpg');
+});
+
+app.get('/homeschool.jpg', (req, res) => {
+    res.sendFile(__dirname + '/homeschool.jpg');
+});
+
+app.get('/kid.jpg', (req, res) => {
+    res.sendFile(__dirname + '/kid.jpg');
+});
+
+app.get('/learning.jpg', (req, res) => {
+    res.sendFile(__dirname + '/learning.jpg');
+});
+
+app.get('/middle.jpg', (req, res) => {
+    res.sendFile(__dirname + '/middle.jpg');
+});
+
+app.get('/mypic.jpg', (req, res) => {
+    res.sendFile(__dirname + '/mypic.jpg');
+});
+
+app.get('/online.jpg', (req, res) => {
+    res.sendFile(__dirname + '/online.jpg');
+});
+
+app.get('/price.html', (req, res) => {
+    res.sendFile(__dirname + '/price.html');
+});
+
+app.get('/smalgr.jpg', (req, res) => {
+    res.sendFile(__dirname + '/smalgr.jpg');
+});
+
+app.get('/style.css', (req, res) => {
+    res.sendFile(__dirname + '/style.css');
+});
+
+app.get('/trigonometric.jpg', (req, res) => {
+    res.sendFile(__dirname + '/trigonometric.jpg');
+});
+
+app.get('/world.jpg', (req, res) => {
+    res.sendFile(__dirname + '/world.jpg');
+});
+
 app.get('/knight2-retry2.png', (req, res) => {
     res.sendFile(__dirname + '/knight2-retry2.png');
 });
