@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introduction</title>
+        <style>
+            .content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .oneline {
+                display: inline
+            }
+            .placeholder {
+                height: 90px;
+                width: 100%;
+                /* border: 1px solid black; */
+            }
+            a {
+                text-align: center;
+                color: red;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <!-- Things to cover:
+            Camel Case
+            Javascript
+            Statements
+            How to use the website
+            Flow of execution
+            Operations
+            Variables
+        -->
+        <div class="top">
+
+        </div>
+        <div class="top content">
+            <div class="mid statements">
+                <p>Code is made of lines of commands, which help us tell the computer what to do!
+                    I want you to practice giving the computer some basic math problems, you can use + and -,
+                    and also * for multiplication and / for division. Run each line with the button below,
+                </p>
+                <textarea id="cmd1" cols="10" rows="1" placeholder="1+1"></textarea>=<div id="p1" class="oneline">__</div>
+                <button id="cmd1_b">Run Command 1</button><br>
+                <textarea id="cmd2" cols="10" rows="1" placeholder="2+2"></textarea>=<div id="p2" class="oneline">__</div>
+                <button id="cmd2_b">Run Command 2</button><br>
+                <textarea id="cmd3" cols="10" rows="1" placeholder="3+3"></textarea>=<div id="p3" class="oneline">__</div>
+                <button id="cmd3_b">Run Command 3</button><br>
+                <textarea id="cmd4" cols="10" rows="1" placeholder="4+4"></textarea>=<div id="p4" class="oneline">__</div>
+                <button id="cmd4_b">Run Command 4</button><br>
+                <div class="placeholder"></div>
+                
+            </div>
+            <div class="mid variables">
+                <p>Variables are use to store something we want to use or remember later. It's kind of like a box, but for
+                    data! We can store different things in variables, like numbers, words, and even True/False!<br>
+                    Before we start writing our code, we want to explain two things. One is how we actually <em>make</em>
+                    variables. We make variables like this:<br>
+                    <span class="codeblock">someVar = 42;</span><br>
+                    Notice that we named our variable, 'someVar', which is short for 'some variable'! Also notice how we
+                    started with a lowercase letter, and instead of using spaces for words, we just smushed them together and
+                    capitalized the first letter of every following word. Here's an extreme example:<br>
+                    <span class="codeblock">theVarIMadeAndThatIReallyLike = 42;</span><br>
+                    Wow, that's a long variable haha. Notice how we started with a lowercase and every following word was
+                    capitalized? In coding, we call that <em>Camel Case</em>.<br>
+                    Alright, I think you're ready to tackle coding. In this course we'll be learning a language called
+                    Javascript. If you haven't already, do the practice problems to the left, then move on when the buttom
+                    is green!<br>
+                </p>
+            </div>
+            <div class="mid">
+    
+            </div>
+            <div class="mid">
+    
+            </div>
+        </div>
+        <a>Let's Start!</a>
+    </body>
+    <script>
+        let q1 = false;
+        let q2 = false;
+        let q3 = false;
+        let q4 = false;
+
+        function check_p1() {
+            if (q1&&q2&&q3&&q4) {
+                $('.placeholder').text('When we move to the next session, our code is going to look kind of similar. We\'ll write it\
+                    line by line, and it\'s going to execute line by line! We\'ll be working with numbers, but also with variables,\
+                    which is in the next box! When you\'re done reading, click the button below to move on to the next session!');
+                $('a').attr('href', 'level1.html');
+                $('a').attr('style', 'color: green;');
+            }
+        }
+
+
+        $('#cmd1_b').click(function()
+        {
+            let cmd = $('#cmd1').val();
+            try
+            {
+                let x = eval(cmd);
+                $('#p1').text(x);
+                q1 = true;
+                check_p1();
+            }
+            catch(err)
+            {
+                alert(err+"\n\n"+"Did you try just a simple math problem?");
+            }
+        })
+        $('#cmd2_b').click(function()
+        {
+            let cmd = $('#cmd2').val();
+            try
+            {
+                let x = eval(cmd);
+                $('#p2').text(x);
+                q2 = true;
+                check_p1();
+            }
+            catch(err)
+            {
+                alert(err+"\n\n"+"Did you try just a simple math problem?");
+            }
+        })
+        $('#cmd3_b').click(function()
+        {
+            let cmd = $('#cmd3').val();
+            try
+            {
+                let x = eval(cmd);
+                $('#p3').text(x);
+                q3 = true;
+                check_p1();
+            }
+            catch(err)
+            {
+                alert(err+"\n\n"+"Did you try just a simple math problem?");
+            }
+        })
+        $('#cmd4_b').click(function()
+        {
+            let cmd = $('#cmd4').val();
+            try
+            {
+                let x = eval(cmd);
+                $('#p4').text(x);
+                q4 = true;
+                check_p1();
+            }
+            catch(err)
+            {
+                alert(err+"\n\n"+"Did you try just a simple math problem?");
+            }
+        })
+    </script>
+</html>
