@@ -42,3 +42,8 @@ button{
     width: 5rem;
     background-color: red;
 }
+.codeblock{
+  background-color: hsla(204,100%,0%,.85);
+  color: #e6ffff;
+  padding: 2px;
+}
