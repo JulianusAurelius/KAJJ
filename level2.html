@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            canvas {
+                border: 1px solid black;
+            }
+            h3 {
+                height: 15px;
+                text-align: center;
+            }
+            body {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .codeblock {
+                background-color: black;
+                color: white;
+            }
+            #instr {
+                border: 1px solid black;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="./script.js"></script>
+    </head>
+    <body>
+        <div id="instr">
+            <p>Welcome to functions!!</p>
+            <p>This section is currently under development, so no lessons at this time! Feel free to practice your XSS if you want ;)</p>
+        </div>
+        <div id="game">
+            <h3 id="title"></h3>
+            <canvas id="canvas" width="400" height="400"></canvas> 
+        </div>
+
+        <div>
+            <textarea id="code" cols="50" rows="30" placeholder="Write your code here!"></textarea>
+            <button id="button">Run</button>
+            <p id="play_h_p" >Player Health: <span id="play_h">10</span> hp</p>
+            <p id="enem_h_p">Enemy Health: <span id="enem_h">10</span> hp</p>
+        </div>
+          
+          
+    </body>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const title = urlParams.get('title');
+        $('#title').text(title);
+        const pos = urlParams.get('pos');
+        let player_x = pos.split(',')[0];
+        let player_y = pos.split(',')[1];
+        player_x = player_x.slice(1, player_x.length);
+        player_y = player_y.slice(0, player_y.length-1);
+        console.log(player_x);
+        console.log(player_y);
+
+
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var knight = 'knight-retry3.png';
+        var knightAttack = 'knight2-retry2.png';
+        var knightHurt = 'knight-hurt2-retry2.png';
+        var zombie = 'zombie1-retry2.png';
+        var zombieHurt = 'zombie1-hurt-retry2.png';
+        var single_tile = 'back-retry2.png';
+
+        var tile = new Image();
+        tile.src = single_tile;
+        function drawTiles()
+        {
+            for(var i = 0; i < canvas.width; i+=canvas.width/10)
+            {
+                for(var j = 0; j < canvas.height; j+=canvas.height/10)
+                {
+                    ctx.drawImage(tile,i,j,canvas.width/10,canvas.height/10);
+                }
+            }
+        }
+
+        tile.onload = function()
+        {
+            drawTiles();
+        };     
+
+        
+        let player_x2 = canvas.width/10;
+        let player_y2 = canvas.height/10;
+        let player_hp = 10;
+        let player_damage = 1;
+        let gamePlay = false;
+
+        var knight_i = new Image();
+        knight_i.src = knight;
+
+        var knightHurt_i = new Image();
+        knightHurt_i.src = knightHurt;
+
+        var knightAttack_i = new Image();
+        knightAttack_i.src = knightAttack;
+
+        let currPlayerImage = knight_i;
+
+        knight_i.onload = function () {
+           
+            ctx.drawImage(currPlayerImage,player_x,player_y,player_x2,player_y2);
+        };
+
+
+        let enemy_x = canvas.width - canvas.width/10*3;
+        let enemy_x2 = canvas.width/10;
+        let enemy_y = canvas.height - canvas.height/10*3;
+        let enemy_y2 = canvas.height/10;
+        let zombie_hp = 10;
+        let enemyVulnerable = true;
+        var zombie_i = new Image();
+        zombie_i.src = zombie;
+
+        zombie_i.onload = function () {
+           
+            ctx.drawImage(zombie_i,enemy_x,enemy_y,enemy_x2,enemy_y2);
+        };
+
+        var zombieHurt_i = new Image();
+        zombieHurt_i.src = zombieHurt;
+        let attackFlag = false;
+        currEnemyImage = zombie_i;
+        let turnsToEnemyMove = 3;
+        let enemyDead = false;
+        let enemyMoveList = [0,0,1,1,2,2,3,3];
+        
+
+        $("#code").click(function()
+        {
+            gamePlay = false;
+        });
+        $("#game").click(function()
+        {
+            gamePlay = true;
+        });
+        $('#button').click(function(){
+            if (goal1())
+            {
+                if (goal2())
+                {
+                    if (goal3())
+                    {
+
+                    }
+                }
+            }
+        });
+        
+    </script>
+</html>
