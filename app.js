@@ -52,6 +52,10 @@ app.get('/views/register.hbs', (req, res) => {
     res.sendFile(__dirname + '/views/register.hbs');
 });
 
+app.get('/index.html', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+});
+
 //For Courses
 app.get('/intro.html', (req, res) => {
     res.sendFile(__dirname + '/intro.html');
@@ -118,7 +122,7 @@ app.get('/History.jpg', (req, res) => {
 });
 
 app.get('/Web.jpg', (req, res) => {
-    res.sendFile(__dirname + '/Web.png');
+    res.sendFile(__dirname + '/Web.jpg');
 });
 
 app.get('/aboutus.html', (req, res) => {
@@ -133,8 +137,8 @@ app.get('/biggr.jpg', (req, res) => {
     res.sendFile(__dirname + '/biggr.jpg');
 });
 
-app.get('/c-program.jpg', (req, res) => {
-    res.sendFile(__dirname + '/c-program.jpg');
+app.get('/c-program.jpeg', (req, res) => {
+    res.sendFile(__dirname + '/c-program.jpeg');
 });
 
 app.get('/calculus.jpg', (req, res) => {
