@@ -15,7 +15,6 @@ https://hackathon-website-enfpf6p55q-uc.a.run.app/<br>
 [x] Google Cloud for Database Handling<br>
 [x] SHA-512<br>
 [ ]Allow student to be assigned to parent account<br>
-[ ]Monetiziation<br>
 [ ]Course Progress Tracker<br>
 [ ]Sending Emails<br>
 [ ]Assigning students to parents<br>
